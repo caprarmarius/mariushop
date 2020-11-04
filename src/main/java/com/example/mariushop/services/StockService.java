@@ -33,11 +33,11 @@ public class StockService {
                 return stockMapper.mapStockToStockDTO(stock);
             }
         } else {
-            if (productRepository.findProductByProductID(stockDTO.getProductID()) != null) {
+            if (productRepository.findProductByProductId(stockDTO.getProductID()) != null) {
                 Stock stock = Stock.builder()
                         .location(locationRepository.findLocationById(stockDTO.getLocationID()))
                         .quantity(stockDTO.getQuantity())
-                        .product(productRepository.findProductByProductID(stockDTO.getProductID()))
+                        .product(productRepository.findProductByProductId(stockDTO.getProductID()))
                         .build();
                 stockRepository.save(stock);
                 return stockMapper.mapStockToStockDTO(stock);

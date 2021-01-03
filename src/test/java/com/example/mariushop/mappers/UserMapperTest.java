@@ -17,10 +17,10 @@ import static org.junit.jupiter.api.Assertions.*;
 class UserMapperTest {
     Roles testRole = new Roles(1, "testRole", null);
     RoleDTO testRoleDTO = new RoleDTO(1, "testRole");
-    List<Cart> testCartList = new ArrayList<Cart>();
+    List<Cart> testCartList = new ArrayList<>();
     CartMapper testCartMapper = new CartMapper();
     List<CartDTO> testCartDTOList = testCartMapper.mapCartListToCartDTOList(testCartList);
-    List<Order> testOrderList = new ArrayList<Order>();
+    List<Order> testOrderList = new ArrayList<>();
     RoleMapper testRoleMapper = new RoleMapper();
 
     UserMapper userMapperTest = new UserMapper(testRoleMapper,testCartMapper);

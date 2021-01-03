@@ -22,8 +22,8 @@ public class CartMapperTest {
     Cart testCart2 = new Cart(1002,10,1004,testCartUser);
     Cart testCart3 = new Cart(1003,10,1005,testCartUser);
     CartMapper testCartMapper = new CartMapper();
-    List<Cart> testCartList = new ArrayList<Cart>();
-    List<CartDTO> testCartDTOList = new ArrayList<CartDTO>();
+    List<Cart> testCartList = new ArrayList<>();
+    List<CartDTO> testCartDTOList = new ArrayList<>();
 
 
     @Test

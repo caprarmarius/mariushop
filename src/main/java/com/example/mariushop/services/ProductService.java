@@ -74,7 +74,7 @@ public class ProductService {
 
     public ProductCategory testCategoryExistence(String categoryName, String categoryDescription) {
         Optional<ProductCategory> productCategory = productCategoryRepository.findByName(categoryName);
-        ProductCategory prod = null;
+        ProductCategory prod;
 
         if (productCategory.isPresent()) {
             prod = productCategory.get();

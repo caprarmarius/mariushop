@@ -62,7 +62,7 @@ public class OrderService {
 
     public Address testAddressExistence(String country, String city, String street) {
         Optional<Address> addressOptional = addressRepository.findByCountryAndAndCityAndStreet(country, city, street);
-        Address address = null;
+        Address address;
         if (addressOptional.isPresent()) {
             address = addressOptional.get();
         } else {
@@ -78,7 +78,7 @@ public class OrderService {
     public Location testLocationExistence(String name, AddressDTO addressDTO) {
         Optional<Location> locationOptional = locationRepository.findByAddress_CountryAndAddress_CityAndAddress_Street
                 (addressDTO.getAddressCountry(), addressDTO.getAddressCity(), addressDTO.getAddressStreet());
-        Location location = null;
+        Location location;
 
         if (locationOptional.isPresent()) {
             location = locationOptional.get();

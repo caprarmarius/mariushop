@@ -4,12 +4,14 @@ import com.example.mariushop.strategies.DeliveryStrategyInterface;
 import com.example.mariushop.strategies.MostAbundantStrategy;
 import com.example.mariushop.strategies.SingleLocationStrategy;
 import com.example.mariushop.strategies.StrategyEnum;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+@Data
 @Configuration
 public class DeliveryStrategyConfiguration {
 
